@@ -1,0 +1,55 @@
+/* -------- INPUT FIELD -------- */
+
+.page-wrap .calc-container .input-container input:focus {
+  border: 1px solid var(--purple);
+  transition: var(--transitionFade);
+  outline: none;
+}
+
+.input-container .input-ok {
+  border: 1px solid var(--Light-grey);
+  transition: var(--transitionFade);
+}
+
+.input-container .input-error {
+  border: 1px solid var(--Light-red);
+  transition: var(--transitionFade);
+}
+
+.label-error{
+  color: var(--Light-red);
+}
+
+/* -------- ERROR MENSAGE -------- */
+
+.page-wrap .calc-container .input-container .error-message {
+  color: var(--Light-red);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.5px;
+  transition: var(--transitionFade);
+}
+
+.hide {
+  opacity: 0;
+  appearance: none;
+  transition: var(--transitionFade);
+}
+
+/* -------- ACTIVE RESPONSIVE -------- */
+
+@media (max-width: 510px) {
+  .page-wrap .calc-container .input-container .error-message {
+    font-size: 1rem;
+    letter-spacing: -0.6px;
+  }
+}
+
+/* -------- BUTTON -------- */
+
+.page-wrap .middle-line button:hover {
+  background-color: var(--Off-black);
+  transition: var(--transitionFade);
+  transform: scale(1.1);
+}

@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,800&display=swap");
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--Light-grey);
+}
+
+/* -------- GENERAL -------- */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.page-wrap {
+  height: 100vh;
+}
+
+/* -------- CONTAINERS -------- */
+
+
+
+.page-wrap .calc-container {
+  background-color: var(--White);
+  width: 680px;
+  height: 550px;
+  border-radius: 30px 30px 30% 30px;
+  padding: 50px;
+  min-width: 375px;
+  margin: 20px;
+}
+
+/* -------- DATA INPUT -------- */
+
+.page-wrap .calc-container .input-container {
+  max-width: 530px;
+  color: var(--Smokey-grey);
+}
+
+.page-wrap .calc-container .input-container input::-webkit-outer-spin-button,
+.page-wrap .calc-container .input-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.page-wrap .calc-container .input-container input[type="number"] {
+  appearance: textfield;
+}
+
+
+
+.page-wrap .calc-container .input-container li label {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+}
+
+.page-wrap .calc-container .input-container .date-input {
+  font-size: 3.2rem;
+  max-width: 120px;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 10px;
+
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+/* -------- LINE AND BUTTON -------- */
+
+.page-wrap .middle-line {
+  max-width: 650px;
+  align-items: center;
+  position: relative;
+}
+
+.page-wrap .middle-line hr {
+  height: 1px;
+  width: 480px;
+  background-color: var(--Light-grey);
+  border: none;
+}
+
+.page-wrap .middle-line button {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--purple);
+  border: none;
+  transition: var(--transitionFade);
+}
+
+/* -------- RESULT -------- */
+
+
+.page-wrap .info-container {
+  font-size: 8rem;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 90px;
+}
+
+.page-wrap .info-container p span {
+  color: var(--purple);
+  letter-spacing: 15px;
+}
