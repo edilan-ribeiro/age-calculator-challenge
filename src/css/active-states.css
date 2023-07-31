@@ -9,11 +9,13 @@
 .input-container .input-ok {
   border: 1px solid var(--Light-grey);
   transition: var(--transitionFade);
+  outline: none;
 }
 
 .input-container .input-error {
   border: 1px solid var(--Light-red);
   transition: var(--transitionFade);
+  outline: none;
 }
 
 .label-error{

@@ -95,6 +95,7 @@ body {
   background-color: var(--purple);
   border: none;
   transition: var(--transitionFade);
+  cursor: pointer;
 }
 
 /* -------- RESULT -------- */
