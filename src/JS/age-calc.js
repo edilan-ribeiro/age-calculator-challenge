@@ -79,19 +79,21 @@ calculateButton.addEventListener('click', () => {
             valid = false;
             dayInput.classList.add('input-error');
             dayInput.parentElement.classList.add('label-error');
+            dayInput.parentElement.querySelector('p').textContent = 'This field is required';
             dayInput.parentElement.querySelector('p').classList.remove('hide');
         }
       if (monthInput.value === '') {
             valid = false;
             monthInput.classList.add('input-error');
             monthInput.parentElement.classList.add('label-error');
+            monthInput.parentElement.querySelector('p').textContent = 'This field is required';
             monthInput.parentElement.querySelector('p').classList.remove('hide');
         }
       if (yearInput.value === '') {
           valid = false;
           yearInput.classList.add('input-error');
           yearInput.parentElement.classList.add('label-error');
-          yearInput.parentElement.querySelector('p').textContent = 'Must be a valid year';
+          yearInput.parentElement.querySelector('p').textContent = 'This field is required';
           yearInput.parentElement.querySelector('p').classList.remove('hide');
         }
 
