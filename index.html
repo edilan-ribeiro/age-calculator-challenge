@@ -22,21 +22,21 @@
 
         <ul class="input-container flex">
 
-          <li>
-            <label for="day" class="">Day</label><br />
-            <input type="number" inputmode="numeric" name="day" id="day" placeholder="DD" class="date-input input-ok "/>
+          <li class="inputs">
+            <label for="day" class="labels">Day</label><br />
+            <input type="number" inputmode="numeric" name="day" placeholder="DD" class="date-input input-ok " id="day"/>
             <p class="error-message hide">Must be a valid day</p>
           </li>
 
-          <li>
-            <label for="day" class="">Month</label><br />
-            <input type="number" name="month" id="month" placeholder="MM" class="date-input input-ok"/>
+          <li class="inputs">
+            <label for="day" class="labels">Month</label><br />
+            <input type="number" name="month"  placeholder="MM" class="date-input input-ok" id="month"/>
             <p class="error-message hide">Must be a valid month</p>
           </li>
 
-          <li>
-            <label for="day" class="">Year</label><br />
-            <input type="number" name="year" id="year" placeholder="YYYY" class="date-input input-ok"/>
+          <li class="inputs">
+            <label for="day" class="labels">Year</label><br />
+            <input type="number" name="year"  placeholder="YYYY" class="date-input input-ok" id="year"/>
             <p class="error-message hide">Must be in the past</p>
           </li>
 
@@ -45,7 +45,7 @@
         <div class="middle-line flex">
           <hr>
 
-          <button>
+          <button id="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
           </button>
 
@@ -61,5 +61,6 @@
       </div>
     </main>
 
+    <script src="./src/JS/age-calc.js"></script>
   </body>
 </html>
