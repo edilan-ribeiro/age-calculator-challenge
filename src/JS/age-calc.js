@@ -25,19 +25,16 @@ calculateButton.addEventListener('click', () => {
       let valid = true;
 
       // Validate day
-      if (
-            day < 1 || day > 31 ||
-            (month === 4 && day > 30) ||
-            (month === 6 && day > 30) ||
-            (month === 9 && day > 30) ||
-            (month === 11 && day > 30) ||
-            (month === 2 && ((year % 4 != 0 || year % 100 == 0) && day > 28) ||
-            day > 29))
-                          {
+      if ( day < 1 ||
+        day > 31 ||
+        (day > 30 && [4, 6, 9, 11].includes(month)) ||
+        (month === 2 && (day > 29 || (day > 28 && !((year % 4 === 0) && (year % 100 !== 0 || year % 400 === 0)))))
+        )                 {
                               valid = false;
                               dayInput.classList.add('input-error');
                               dayInput.classList.remove('input-ok');
                               dayInput.parentElement.classList.add('label-error');
+                              dayInput.parentElement.querySelector('p').textContent = 'Must be a valid day';
                               dayInput.parentElement.querySelector('p').classList.remove('hide');
                           } else {
                               dayInput.classList.remove('input-error');
@@ -52,6 +49,7 @@ calculateButton.addEventListener('click', () => {
             monthInput.classList.add('input-error');
             monthInput.classList.remove('input-ok');
             monthInput.parentElement.classList.add('label-error');
+            monthInput.parentElement.querySelector('p').textContent = 'Must be a valid month';
             monthInput.parentElement.querySelector('p').classList.remove('hide');
         } else {
             monthInput.classList.remove('input-error');
@@ -66,6 +64,7 @@ calculateButton.addEventListener('click', () => {
             yearInput.classList.add('input-error');
             yearInput.classList.remove('input-ok');
             yearInput.parentElement.classList.add('label-error');
+            yearInput.parentElement.querySelector('p').textContent = 'Must be in the past';
             yearInput.parentElement.querySelector('p').classList.remove('hide');
         } else {
             yearInput.classList.remove('input-error');
