@@ -20,6 +20,28 @@ calculateButton.addEventListener('click', () => {
       const currentYear = today.getFullYear();
       const currentMonth = today.getMonth() + 1;
       const currentDay = today.getDate();
+
+
+      // Number Animation
+      function animateNumber(element, start, end, duration) {
+        let currentNumber = start;
+
+        const increment = Math.ceil((end - start) / (duration / 30));
+        
+        const timer = setInterval(() => {
+          currentNumber += increment;
+          element.textContent = currentNumber;
+      
+          if (currentNumber >= end) {
+            clearInterval(timer);
+          }
+        }, 30);
+      }
+       
+      const startNumber = 0;
+      const animationDuration = 2000; 
+      
+
     
       // Validate input dates
       let valid = true;
@@ -107,4 +129,16 @@ calculateButton.addEventListener('click', () => {
             yearResult.textContent = `${age}`;
             monthResult.textContent = `${((currentMonth - month) + 12) % 12}`;
             dayResult.textContent = `${Math.abs(currentDay - day)}`;
-        }});
+
+            const endYearNumber = `${age}`;
+            const endMonthNumber = `${((currentMonth - month) + 12) % 12}`;
+            const endDayNumber = `${Math.abs(currentDay - day)}`;
+      
+            //Number Animation
+            animateNumber(yearResult, startNumber, endYearNumber, animationDuration);
+            animateNumber(monthResult, startNumber, endMonthNumber, animationDuration);
+            animateNumber(dayResult, startNumber, endDayNumber, animationDuration);
+
+            
+        }
+});
